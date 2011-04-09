@@ -7,8 +7,6 @@
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
   <meta content="en-us" http-equiv="Content-Language" /> 
   
-  <meta name="keywords" content="lineofthought, status">
-  
   <link href="http://feeds.feedburner.com/lineofthoughtcom" rel="alternate" title="Line Of Thought Blog" type="application/atom+xml" />
   
   <link href="http://lineofthought.com/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" /> 
@@ -50,11 +48,30 @@
 <div id="main"> 
   <div class="container group"> 
     <section id="content" class="main"> 
-      <div id="post">
+      <div id="home">
   <articles>
+    
       <article>
-        <h2>What is Line Of Thought?</h2>
-        <div class="article">
+        <h2><a href="/2011/04/08/getting-lineofthought-working-in-ie.html">Getting Line of Thought Working in IE</a></h2>
+        <div class="content">
+          <p>No one likes getting a layout working in Internet Explorer. Luckily there has been a major movement in the web world to not support older versions of IE as usage of those browsers weens. That&#8217;s the aim we&#8217;re taking with Line of Thought as well, and plan to only test the site in the current version and previous version of major browsers. Now that IE 9 is out, that means getting this blog and <a href="http://lineofthought.com">Line of Thought</a> working in only IE 8 and 9. One morning this week I switched over to my girlfriends old windows computer to see the horror.</p>
+<h3><span class="caps">HTML</span> 5 and Internet Explorer 8</h3>
+<p>The first browser tried was IE 8. Since Line of Thought uses a number of <span class="caps">HTML</span> 5 tags including &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;aside&gt; and &lt;footer&gt;, it was pretty obvious the site was going to fail spectacularly, and sure enough it did.</p>
+<p>Luckily there&#8217;s a great workaround for this in the form of a shim script. You can read more about this <a href="http://remysharp.com/2009/01/07/html5-enabling-script/">HTML5 enabling script</a> or give it a try. Just make sure to include this in the &lt;head&gt; of your document.</p>
+<p>Liquid error: No such file or directory &#8211; pygmentize -l javascript -f html -O encoding=utf-8</p>
+<p>So this script won&#8217;t even be included if you&#8217;re running IE 9 or later, but for IE 8 it&#8217;ll help. No css declarations had to change for this, it just worked.</p>
+<p>One additional tag I somehow put in was a &lt;sidebar&gt; tag. Apparently I thought this was another new <span class="caps">HTML</span> 5 tag, but it&#8217;s not in the specification. Firefox and Chrome didn&#8217;t complain about this, so it worked fine and was styleable, but the Javascript code wouldn&#8217;t work with it. After going threw and changing these to &lt;section class=&#8220;sidebar&#8221;&gt; tags and changing a few styles everything was working fine.</p>
+<p>Surprisingly that was the entirety of getting the site to work in IE8. No individual styles were added, no special cases or hacks required. Part of that is due to the fact that the layout is sparse, and doesn&#8217;t take advantage of many new effects. Those that it does use, such as gradients in buttons, degrade down to single color buttons which work fine in IE8. Luckily things don&#8217;t need to look <a href="http://dowebsitesneedtolookexactlythesameineverybrowser.com/">identical</a>. Total time to get the site working in IE8: less than 20 minutes.</p>
+<h3>Internet Explorer 9</h3>
+<p>IE 9 brings about support for most new <span class="caps">HTML</span> tags, including all the ones mentioned above.</p>
+        </div>
+        <span class="date">Posted on April 08, 2011</span>
+        <span><a href="/2011/04/08/getting-lineofthought-working-in-ie.html#comments">Comments</a></span>
+      </article>
+    
+      <article>
+        <h2><a href="/2011/04/05/what-is-line-of-thought.html">What is Line Of Thought?</a></h2>
+        <div class="content">
           <p>If you&#8217;re a passionate developer, chances are you enjoy talking to other people about the programming languages, frameworks, databases and other tools you&#8217;re using. At a basic level, just about every website out there divulges basic information about their server stack, be it a little <a href="http://lineofthought.com/tools/python">Python</a> here, or a little <a href="http://lineofthought.com/tools/php"><span class="caps">PHP</span></a> there. Line Of Thought helps developers share this information with the world while aggregating it with everyone else who wants to share.</p>
 <p>Our goal is to make it easy to create a list of tools used on any website. For instance, on the listing page for <a href="http://lineofthought.com/sites/lineofthought">Line Of Thought</a> we share just about all technology in our stack. It lists out all the basics you&#8217;d imagine (language, database, framework), but goes deeper into back end libraries. Which Ruby gems and Javascript libraries a site is using won&#8217;t be interesting to everyone, but if you&#8217;re looking to share with your peers, or looking for new tools to check out, this is a great way to do it fast.</p>
 <h3>Site Owners Looking to Share</h3>
@@ -78,32 +95,24 @@
 <h3>Questions? Comments?</h3>
 <p>We&#8217;re very much in the early stage of this idea, and it&#8217;s safe to say to say there will be bugs. If you run into anything weird, or want to get in touch with us, please <a href="http://lineofthought.com/about">contact us directly</a>, <a href="https://getsatisfaction.com/lineofthought">let us know via GetSatisfaction</a>, or just leave a comment on the blog. Wherever you leave a message, we&#8217;ll see it!</p>
         </div>
-        <p class="date">Posted on April 05, 2011</p>
+        <span class="date">Posted on April 05, 2011</span>
+        <span><a href="/2011/04/05/what-is-line-of-thought.html#comments">Comments</a></span>
       </article>
+    
   </articles>
+  
+  <!-- Pagination links 
+  <div class="pagination">
+    
+      <span class="previous">Previous</span>
+    
+    <span class="page_number ">Page: 1 of 1</span>
+    
+      <span class="next ">Next</span>
+    
+  </div>-->
 </div>
 
-<div id="comments">
-  <a name="#comments"></a>
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = 'lineofthought'; // required: replace example with your forum shortname
-
-      // The following are highly recommended additional parameters. Remove the slashes in front to use.
-      var disqus_identifier = 'lineofthought-blog-/2011/04/05/what-is-line-of-thought';
-      var disqus_url = 'http://blog.lineofthought.com/2011/04/05/what-is-line-of-thought.html';
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
     </section>
   </div> 
 </div> 

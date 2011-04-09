@@ -4,7 +4,7 @@
  <title>Line Of Thought Blog</title>
  <link href="http://blog.lineofthought.com/atom.xml" rel="self"/>
  <link href="http://blog.lineofthought.com/"/>
- <updated>2011-04-08T22:18:32-04:00</updated>
+ <updated>2011-04-08T22:05:31-04:00</updated>
  <id>http://blog.lineofthought.com/</id>
  <author>
    <name>Line Of Thought Blog</name>
@@ -20,15 +20,12 @@
 &lt;h3&gt;&lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 and Internet Explorer 8&lt;/h3&gt;
 &lt;p&gt;The first browser tried was IE 8. Since Line of Thought uses a number of &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 tags including &amp;lt;header&amp;gt;, &amp;lt;nav&amp;gt;, &amp;lt;section&amp;gt;, &amp;lt;aside&amp;gt; and &amp;lt;footer&amp;gt;, it was pretty obvious the site was going to fail spectacularly, and sure enough it did.&lt;/p&gt;
 &lt;p&gt;Luckily there&amp;#8217;s a great workaround for this in the form of a shim script. You can read more about this &lt;a href=&quot;http://remysharp.com/2009/01/07/html5-enabling-script/&quot;&gt;HTML5 enabling script&lt;/a&gt; or give it a try. Just make sure to include this in the &amp;lt;head&amp;gt; of your document.&lt;/p&gt;
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lt&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;IE&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://html5shim.googlecode.com/svn/trunk/html5.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;&lt;p&gt;This script won&amp;#8217;t even be included if you&amp;#8217;re running IE 9 or later, but for IE 8 it&amp;#8217;ll help. No css declarations had to change for this, it just worked. All of the sudden all of my tags were read and styled correctly in IE8 with no additional work. Pretty impressive!&lt;/p&gt;
-&lt;p&gt;One additional tag I somehow put in my initial prototype was a &amp;lt;sidebar&amp;gt; tag. Apparently I thought this was another new &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 tag, but it&amp;#8217;s not in the specification. There is an &amp;lt;aside&amp;gt; tag, but no sidebar. Firefox and Chrome didn&amp;#8217;t complain about this, so it worked fine and was style able, but the Javascript code wouldn&amp;#8217;t work with it in IE8. After going through and changing these to &amp;lt;section class=&amp;#8220;sidebar&amp;#8221;&amp;gt; tags and updating a few styles the site looked fine in IE8 and continued to work in other browsers.&lt;/p&gt;
+&lt;p&gt;Liquid error: No such file or directory &amp;#8211; pygmentize -l javascript -f html -O encoding=utf-8&lt;/p&gt;
+&lt;p&gt;So this script won&amp;#8217;t even be included if you&amp;#8217;re running IE 9 or later, but for IE 8 it&amp;#8217;ll help. No css declarations had to change for this, it just worked.&lt;/p&gt;
+&lt;p&gt;One additional tag I somehow put in was a &amp;lt;sidebar&amp;gt; tag. Apparently I thought this was another new &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 tag, but it&amp;#8217;s not in the specification. Firefox and Chrome didn&amp;#8217;t complain about this, so it worked fine and was styleable, but the Javascript code wouldn&amp;#8217;t work with it. After going threw and changing these to &amp;lt;section class=&amp;#8220;sidebar&amp;#8221;&amp;gt; tags and changing a few styles everything was working fine.&lt;/p&gt;
 &lt;p&gt;Surprisingly that was the entirety of getting the site to work in IE8. No individual styles were added, no special cases or hacks required. Part of that is due to the fact that the layout is sparse, and doesn&amp;#8217;t take advantage of many new effects. Those that it does use, such as gradients in buttons, degrade down to single color buttons which work fine in IE8. Luckily things don&amp;#8217;t need to look &lt;a href=&quot;http://dowebsitesneedtolookexactlythesameineverybrowser.com/&quot;&gt;identical&lt;/a&gt;. Total time to get the site working in IE8: less than 20 minutes.&lt;/p&gt;
 &lt;h3&gt;Internet Explorer 9&lt;/h3&gt;
-&lt;p&gt;IE 9 brings about support for most new &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; tags, including all the ones mentioned above. The &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; didn&amp;#8217;t throw anything far off either, so the site actually looked the same in IE9 as in Firefox and Chrome. This is my first time getting a site working in IE 9, but f this trend continues then developing for it for basic sites should be far easier than working for IE 6/7. If you&amp;#8217;re trying to get your site to work in IE, shooting for 8/9 isn&amp;#8217;t the daunting task that 6/7 used to be.&lt;/p&gt;</content>
+&lt;p&gt;IE 9 brings about support for most new &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; tags, including all the ones mentioned above.&lt;/p&gt;</content>
  </entry>
  
  <entry>

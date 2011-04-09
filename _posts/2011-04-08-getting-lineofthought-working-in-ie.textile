@@ -1,0 +1,31 @@
+---
+layout: post
+title: Getting Line of Thought Working in IE
+id: getting-lineofthought-working-in-ie
+keywords: lineofthought, status, ie
+published: true
+---
+
+No one likes getting a layout working in Internet Explorer. Luckily there has been a major movement in the web world to not support older versions of IE as usage of those browsers weens. That's the aim we're taking with Line of Thought as well, and plan to only test the site in the current version and previous version of major browsers. Now that IE 9 is out, that means getting this blog and "Line of Thought":http://lineofthought.com working in only IE 8 and 9. One morning this week I switched over to my girlfriends old windows computer to see the horror.
+
+h3. HTML 5 and Internet Explorer 8
+
+The first browser tried was IE 8. Since Line of Thought uses a number of HTML 5 tags including &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;aside&gt; and &lt;footer&gt;, it was pretty obvious the site was going to fail spectacularly, and sure enough it did.
+
+Luckily there's a great workaround for this in the form of a shim script. You can read more about this "HTML5 enabling script":http://remysharp.com/2009/01/07/html5-enabling-script/ or give it a try. Just make sure to include this in the &lt;head&gt; of your document.
+
+{% highlight javascript %}
+<!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+{% endhighlight %}
+
+This script won't even be included if you're running IE 9 or later, but for IE 8 it'll help. No css declarations had to change for this, it just worked. All of the sudden all of my tags were read and styled correctly in IE8 with no additional work. Pretty impressive!
+  
+One additional tag I somehow put in my initial prototype was a &lt;sidebar&gt; tag. Apparently I thought this was another new HTML 5 tag, but it's not in the specification. There is an &lt;aside&gt; tag, but no sidebar. Firefox and Chrome didn't complain about this, so it worked fine and was style able, but the Javascript code wouldn't work with it in IE8. After going through and changing these to &lt;section class="sidebar"&gt; tags and updating a few styles the site looked fine in IE8 and continued to work in other browsers.
+
+Surprisingly that was the entirety of getting the site to work in IE8. No individual styles were added, no special cases or hacks required. Part of that is due to the fact that the layout is sparse, and doesn't take advantage of many new effects. Those that it does use, such as gradients in buttons, degrade down to single color buttons which work fine in IE8. Luckily things don't need to look "identical":http://dowebsitesneedtolookexactlythesameineverybrowser.com/. Total time to get the site working in IE8: less than 20 minutes.
+
+h3. Internet Explorer 9
+
+IE 9 brings about support for most new HTML tags, including all the ones mentioned above. The CSS didn't throw anything far off either, so the site actually looked the same in IE9 as in Firefox and Chrome. This is my first time getting a site working in IE 9, but f this trend continues then developing for it for basic sites should be far easier than working for IE 6/7. If you're trying to get your site to work in IE, shooting for 8/9 isn't the daunting task that 6/7 used to be.
