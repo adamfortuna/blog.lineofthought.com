@@ -1,0 +1,49 @@
+---
+layout: post
+title: Using Solr with Sunspot on Heroku
+id: using-solr-and-sunspot-on-heroku
+keywords: solr, sunspot, heroku, ruby
+published: false
+---
+
+Full-Text Search, or FTS, is a system where you extract out the terms you want to search so that you can search them at a much faster speed. Databases like "MySQL":http://lineofthought.com/tools/mysql and "PostgreSQL":http://lineofthought.com/tools/postgres have an option to search full text, but it is difficult to maintain or change, and very limited in scope. "Solr":http://lineofthought.com/tools/solr with "Sunspot":http://lineofthought.com/tools/sunspot 
+
+h3. Why Would I Use Full Text Search?
+
+Whenever you query a relational database with a @LIKE@ statement, you're adding a lot of work to your database. If you start a search with a @%@, for example, the database server will need to read through every single row in your database and check for the column you are searching. FTS searches scan through a generated list of keywords from all fields you want to search through. This enables FTS to be much much faster in some cases. Here's a few situations where you could use FTS:
+
+* Site wide search within a given table. For instance searching all Tweets on Twitter.
+* Autocomplete for a field.
+* Search across multiple fields on a given table.
+* Search across multiple fields on multiple tables.
+
+h3. Solr Integration for a Rails Site
+
+Solr runs as a standalone process. If you have your own server setup, you could run Solr on it as well, or for "Heroku":http://lineofthought.com/tools/heroku, they have a few options to get you started:
+* 250,000 documents for $20.00
+* 750,000 documents for $69.00
+* 1,750,000 documents for $169.00
+* 5,000,000 documents for $499.00
+
+
+
+h3. Autocomplete
+
+{% highlight ruby %}
+searchable do
+  text :title, :default_boost => 2
+  string :lower_title do
+    title.downcase
+  end
+  string :url
+  text :description
+
+  boolean :featured
+  boost { featured? ? 2.0 : 1.0 }
+end
+handle_asynchronously :solr_index
+{% endhighlight %}
+
+h3. More stuff
+
+More code here.

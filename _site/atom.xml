@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Line Of Thought Blog</title>
+ <link href="http://blog.lineofthought.com/atom.xml" rel="self"/>
+ <link href="http://blog.lineofthought.com/"/>
+ <updated>2011-04-06T12:55:10-04:00</updated>
+ <id>http://blog.lineofthought.com/</id>
+ <author>
+   <name>Line Of Thought Blog</name>
+ </author>
+
+ 
+ <entry>
+   <title>What is Line Of Thought?</title>
+   <link href="http://blog.lineofthought.com/2011/04/05/what-is-line-of-thought.html"/>
+   <updated>2011-04-05T00:00:00-04:00</updated>
+   <id>http://blog.lineofthought.com/2011/04/05/what-is-line-of-thought</id>
+   <content type="html">&lt;p&gt;If you&amp;#8217;re a passionate developer, chances are you enjoy talking to other people about the programming languages, frameworks, databases and other tools you&amp;#8217;re using. At a basic level, just about every website out there divulges basic information about their server stack, be it a little &lt;a href=&quot;http://lineofthought.com/tools/python&quot;&gt;Python&lt;/a&gt; here, or a little &lt;a href=&quot;http://lineofthought.com/tools/php&quot;&gt;&lt;span class=&quot;caps&quot;&gt;PHP&lt;/span&gt;&lt;/a&gt; there. Line Of Thought helps developers share this information with the world while aggregating it with everyone else who wants to share.&lt;/p&gt;
+&lt;p&gt;Our goal is to make it easy to create a list of tools used on any website. For instance, on the listing page for &lt;a href=&quot;http://lineofthought.com/sites/lineofthought&quot;&gt;Line Of Thought&lt;/a&gt; we share just about all technology in our stack. It lists out all the basics you&amp;#8217;d imagine (language, database, framework), but goes deeper into back end libraries. Which Ruby gems and Javascript libraries a site is using won&amp;#8217;t be interesting to everyone, but if you&amp;#8217;re looking to share with your peers, or looking for new tools to check out, this is a great way to do it fast.&lt;/p&gt;
+&lt;h3&gt;Site Owners Looking to Share&lt;/h3&gt;
+&lt;p&gt;If you&amp;#8217;re a site owner, you can &amp;#8220;claim&amp;#8221; your site on Line Of Thought, then have full access to it. This allows you to edit any part of it, and lock it from being edited by the public. You can also see each revision of how a site is using an individual tool to see how it&amp;#8217;s changed over time.&lt;/p&gt;
+&lt;p&gt;The biggest draw for site owners is just the ability to share your work. Rather than making a blog post listing out your technology stack, you could or answering questions on &lt;a href=&quot;http://lineofthought.com/sites/quora&quot;&gt;Quora&lt;/a&gt; and other Q&amp;amp;A sites, by entering your tools into Line Of Thought, there&amp;#8217;s a definite location for this knowledge that everyone can refer to.&lt;/p&gt;
+&lt;h3&gt;Tool Builders&lt;/h3&gt;
+&lt;p&gt;So many times I&amp;#8217;ve been on &lt;a href=&quot;http://lineofthought.com/sites/github&quot;&gt;GitHub&lt;/a&gt; and seen a page detailing the sites that are using that project. This kind of page begs to be entered into Line Of Thought. Rather than doing this in a wiki format, or controlled by a single person, it can be handled on a site by site basis by those using it.&lt;/p&gt;
+&lt;h3&gt;Accidental Discovery&lt;/h3&gt;
+&lt;p&gt;Browsing Wikipedia is addicting. You start on one page and before you know it, you have 4 other tabs open for other subjects that looked interesting. Line Of Thought can be the same way. You might start by wondering which sites are using &lt;a href=&quot;http://lineofthought.com/tools/mongodb&quot;&gt;MongoDB&lt;/a&gt; and before long you&amp;#8217;re going through the list of other &lt;a href=&quot;http://lineofthought.com/tools?category=datastore&quot;&gt;Datastores&lt;/a&gt; to see what other sites are using.&lt;/p&gt;
+&lt;h3&gt;Easy to Share&lt;/h3&gt;
+&lt;p&gt;The share links on the side of each site and tool make it easy to share a page on Twitter or Facebook. If you share a site, it&amp;#8217;ll grab random tools used on that site to share (of course you can enter your own as well). This helps make sharing a bit more dynamic. Refreshing the &lt;a href=&quot;http://lineofthought.com/sites/facebook&quot;&gt;Facebook&lt;/a&gt; page a few times, the share message shows up as the following:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Facebook is using at least 19 tools including Apache Hive, MySQL and C (via Line Of Thought)&lt;/li&gt;
+	&lt;li&gt;Facebook is using at least 19 tools including &lt;span class=&quot;caps&quot;&gt;XHP&lt;/span&gt;, Waitr and &lt;span class=&quot;caps&quot;&gt;PHP&lt;/span&gt; (via Line Of Thought)&lt;/li&gt;
+	&lt;li&gt;Facebook is using at least 19 tools including Erlang, &lt;span class=&quot;caps&quot;&gt;XHP&lt;/span&gt; and Facebook Scribe (via Line Of Thought)&lt;/li&gt;
+	&lt;li&gt;Facebook is using at least 19 tools including Apache HBase, JSSpec and &lt;span class=&quot;caps&quot;&gt;XHP&lt;/span&gt; (via Line Of Thought)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&amp;#8217;m way too biased here, but seeing a cool description like that I&amp;#8217;d almost surely go check it out. :)&lt;/p&gt;
+&lt;h3&gt;More About Our Technology Stack&lt;/h3&gt;
+&lt;p&gt;I&amp;#8217;m sure we&amp;#8217;ll be writing more about our technology choices in the weeks to come. Building out Line Of Thought has been a great learning experience, with many many lessons learned already.&lt;/p&gt;
+&lt;h3&gt;Questions? Comments?&lt;/h3&gt;
+&lt;p&gt;We&amp;#8217;re very much in the early stage of this idea, and it&amp;#8217;s safe to say to say there will be bugs. If you run into anything weird, or want to get in touch with us, please &lt;a href=&quot;http://lineofthought.com/about&quot;&gt;contact us directly&lt;/a&gt;, &lt;a href=&quot;https://getsatisfaction.com/lineofthought&quot;&gt;let us know via GetSatisfaction&lt;/a&gt;, or just leave a comment on the blog. Wherever you leave a message, we&amp;#8217;ll see it!&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>
