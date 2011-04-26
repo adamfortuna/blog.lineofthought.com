@@ -1,3 +1,5 @@
 jekyll --server --pygments
 
 jekyll-s3
+
+previous cname: blog.lineofthought.com.s3-website-us-east-1.amazonaws.com
