@@ -1,0 +1,44 @@
+---
+layout: post
+title: What is Line Of Thought?
+id: what-is-line-of-thought
+keywords: lineofthought, status
+published: true
+---
+
+If you're a passionate developer, chances are you enjoy talking to other people about the programming languages, frameworks, databases and other tools you're using. At a basic level, just about every website out there divulges basic information about their server stack, be it a little "Python":http://lineofthought.com/tools/python here, or a little "PHP":http://lineofthought.com/tools/php there. Line Of Thought helps developers share this information with the world while aggregating it with everyone else who wants to share.
+
+Our goal is to make it easy to create a list of tools used on any website. For instance, on the listing page for "Line Of Thought":http://lineofthought.com/sites/lineofthought we share just about all technology in our stack. It lists out all the basics you'd imagine (language, database, framework), but goes deeper into back end libraries. Which Ruby gems and Javascript libraries a site is using won't be interesting to everyone, but if you're looking to share with your peers, or looking for new tools to check out, this is a great way to do it fast.
+
+h3. Site Owners Looking to Share
+
+If you're a site owner, you can "claim" your site on Line Of Thought, then have full access to it. This allows you to edit any part of it, and lock it from being edited by the public. You can also see each revision of how a site is using an individual tool to see how it's changed over time.
+
+The biggest draw for site owners is just the ability to share your work. Rather than making a blog post listing out your technology stack, you could or answering questions on "Quora":http://lineofthought.com/sites/quora and other Q&A sites, by entering your tools into Line Of Thought, there's a definite location for this knowledge that everyone can refer to.
+
+h3. Tool Builders
+
+So many times I've been on "GitHub":http://lineofthought.com/sites/github and seen a page detailing the sites that are using that project. This kind of page begs to be entered into Line Of Thought. Rather than doing this in a wiki format, or controlled by a single person, it can be handled on a site by site basis by those using it.
+
+h3. Accidental Discovery
+
+Browsing Wikipedia is addicting. You start on one page and before you know it, you have 4 other tabs open for other subjects that looked interesting. Line Of Thought can be the same way. You might start by wondering which sites are using "MongoDB":http://lineofthought.com/tools/mongodb and before long you're going through the list of other "Datastores":http://lineofthought.com/tools?category=datastore to see what other sites are using.
+
+h3. Easy to Share
+
+The share links on the side of each site and tool make it easy to share a page on Twitter or Facebook. If you share a site, it'll grab random tools used on that site to share (of course you can enter your own as well). This helps make sharing a bit more dynamic. Refreshing the "Facebook":http://lineofthought.com/sites/facebook page a few times, the share message shows up as the following:
+
+* Facebook is using at least 19 tools including Apache Hive, MySQL and C (via Line Of Thought)
+* Facebook is using at least 19 tools including XHP, Waitr and PHP (via Line Of Thought)
+* Facebook is using at least 19 tools including Erlang, XHP and Facebook Scribe (via Line Of Thought)
+* Facebook is using at least 19 tools including Apache HBase, JSSpec and XHP (via Line Of Thought)
+
+I'm way too biased here, but seeing a cool description like that I'd almost surely go check it out. :)
+
+h3. More About Our Technology Stack
+
+I'm sure we'll be writing more about our technology choices in the weeks to come. Building out Line Of Thought has been a great learning experience, with many many lessons learned already.
+
+h3. Questions? Comments?
+
+We're very much in the early stage of this idea, and it's safe to say to say there will be bugs. If you run into anything weird, or want to get in touch with us, please "contact us directly":http://lineofthought.com/about, "let us know via GetSatisfaction":https://getsatisfaction.com/lineofthought, or just leave a comment on the blog. Wherever you leave a message, we'll see it!

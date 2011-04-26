@@ -1,0 +1,138 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Line Of Thought Blog - Tracking what powers the web</title> 
+  <meta content="Blogging about what powers the web." name="description"/> 
+  <link rel="shortcut icon" href="http://lineofthouht.com/favicon.ico"/> 
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+  <meta content="en-us" http-equiv="Content-Language" /> 
+  
+  <link href="http://feeds.feedburner.com/lineofthoughtcom" rel="alternate" title="Line Of Thought Blog" type="application/atom+xml" />
+  
+  <link href="http://lineofthought.com/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" /> 
+  <!--
+  <link href="http://dev.lineofthought.com:3000/stylesheets/blog.css" media="screen" rel="stylesheet" type="text/css" /> 
+  -->
+  <script type="text/javascript"> 
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-90326-15']);
+    _gaq.push(['_trackPageview']);
+ 
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head> 
+<body class="blog"> 
+<header class="group"> 
+  <div class="container"> 
+    <hgroup id="title"> 
+      <p><a href="http://lineofthought.com">Line Of <span>Thought</span></a></p> 
+      <span>Tracking what powers the web!</span> 
+    </hgroup> 
+    <nav> 
+      <ul> 
+        <li class="sites"><a href="http://lineofthought.com/sites">Sites</a></li> 
+        <li class="tools"><a href="http://lineofthought.com/tools">Tools</a></li> 
+        <li class="blog"><a href="http://blog.lineofthought.com">Blog</a></li> 
+      </ul> 
+    </nav> 
+  </div> 
+</header>
+  
+<div id="main"> 
+  <div class="container group"> 
+    <section id="content" class="main"> 
+      <div id="home">
+  <articles>
+    
+      <article>
+        <h2><a href="/2011/04/08/getting-lineofthought-working-in-ie.html">Getting Line of Thought Working in IE</a></h2>
+        <div class="content">
+          <p>No one likes getting a layout working in Internet Explorer. Luckily there has been a major movement in the web world to not support older versions of IE as usage of those browsers weens. That&#8217;s the aim we&#8217;re taking with Line of Thought as well, and plan to only test the site in the current version and previous version of major browsers. Now that IE 9 is out, that means getting this blog and <a href="http://lineofthought.com">Line of Thought</a> working in only IE 8 and 9. One morning this week I switched over to my girlfriends old windows computer to see the horror.</p>
+<h3><span class="caps">HTML</span> 5 and Internet Explorer 8</h3>
+<p>The first browser tried was IE 8. Since Line of Thought uses a number of <span class="caps">HTML</span> 5 tags including &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;, &lt;aside&gt; and &lt;footer&gt;, it was pretty obvious the site was going to fail spectacularly, and sure enough it did.</p>
+<p>Luckily there&#8217;s a great workaround for this in the form of a shim script. You can read more about this <a href="http://remysharp.com/2009/01/07/html5-enabling-script/">HTML5 enabling script</a> or give it a try. Just make sure to include this in the &lt;head&gt; of your document.</p>
+<p>Liquid error: No such file or directory &#8211; pygmentize -l javascript -f html -O encoding=utf-8</p>
+<p>So this script won&#8217;t even be included if you&#8217;re running IE 9 or later, but for IE 8 it&#8217;ll help. No css declarations had to change for this, it just worked.</p>
+<p>One additional tag I somehow put in was a &lt;sidebar&gt; tag. Apparently I thought this was another new <span class="caps">HTML</span> 5 tag, but it&#8217;s not in the specification. Firefox and Chrome didn&#8217;t complain about this, so it worked fine and was styleable, but the Javascript code wouldn&#8217;t work with it. After going threw and changing these to &lt;section class=&#8220;sidebar&#8221;&gt; tags and changing a few styles everything was working fine.</p>
+<p>Surprisingly that was the entirety of getting the site to work in IE8. No individual styles were added, no special cases or hacks required. Part of that is due to the fact that the layout is sparse, and doesn&#8217;t take advantage of many new effects. Those that it does use, such as gradients in buttons, degrade down to single color buttons which work fine in IE8. Luckily things don&#8217;t need to look <a href="http://dowebsitesneedtolookexactlythesameineverybrowser.com/">identical</a>. Total time to get the site working in IE8: less than 20 minutes.</p>
+<h3>Internet Explorer 9</h3>
+<p>IE 9 brings about support for most new <span class="caps">HTML</span> tags, including all the ones mentioned above.</p>
+        </div>
+        <span class="date">Posted on April 08, 2011</span>
+        <span><a href="/2011/04/08/getting-lineofthought-working-in-ie.html#comments">Comments</a></span>
+      </article>
+    
+      <article>
+        <h2><a href="/2011/04/05/what-is-line-of-thought.html">What is Line Of Thought?</a></h2>
+        <div class="content">
+          <p>If you&#8217;re a passionate developer, chances are you enjoy talking to other people about the programming languages, frameworks, databases and other tools you&#8217;re using. At a basic level, just about every website out there divulges basic information about their server stack, be it a little <a href="http://lineofthought.com/tools/python">Python</a> here, or a little <a href="http://lineofthought.com/tools/php"><span class="caps">PHP</span></a> there. Line Of Thought helps developers share this information with the world while aggregating it with everyone else who wants to share.</p>
+<p>Our goal is to make it easy to create a list of tools used on any website. For instance, on the listing page for <a href="http://lineofthought.com/sites/lineofthought">Line Of Thought</a> we share just about all technology in our stack. It lists out all the basics you&#8217;d imagine (language, database, framework), but goes deeper into back end libraries. Which Ruby gems and Javascript libraries a site is using won&#8217;t be interesting to everyone, but if you&#8217;re looking to share with your peers, or looking for new tools to check out, this is a great way to do it fast.</p>
+<h3>Site Owners Looking to Share</h3>
+<p>If you&#8217;re a site owner, you can &#8220;claim&#8221; your site on Line Of Thought, then have full access to it. This allows you to edit any part of it, and lock it from being edited by the public. You can also see each revision of how a site is using an individual tool to see how it&#8217;s changed over time.</p>
+<p>The biggest draw for site owners is just the ability to share your work. Rather than making a blog post listing out your technology stack, you could or answering questions on <a href="http://lineofthought.com/sites/quora">Quora</a> and other Q&amp;A sites, by entering your tools into Line Of Thought, there&#8217;s a definite location for this knowledge that everyone can refer to.</p>
+<h3>Tool Builders</h3>
+<p>So many times I&#8217;ve been on <a href="http://lineofthought.com/sites/github">GitHub</a> and seen a page detailing the sites that are using that project. This kind of page begs to be entered into Line Of Thought. Rather than doing this in a wiki format, or controlled by a single person, it can be handled on a site by site basis by those using it.</p>
+<h3>Accidental Discovery</h3>
+<p>Browsing Wikipedia is addicting. You start on one page and before you know it, you have 4 other tabs open for other subjects that looked interesting. Line Of Thought can be the same way. You might start by wondering which sites are using <a href="http://lineofthought.com/tools/mongodb">MongoDB</a> and before long you&#8217;re going through the list of other <a href="http://lineofthought.com/tools?category=datastore">Datastores</a> to see what other sites are using.</p>
+<h3>Easy to Share</h3>
+<p>The share links on the side of each site and tool make it easy to share a page on Twitter or Facebook. If you share a site, it&#8217;ll grab random tools used on that site to share (of course you can enter your own as well). This helps make sharing a bit more dynamic. Refreshing the <a href="http://lineofthought.com/sites/facebook">Facebook</a> page a few times, the share message shows up as the following:</p>
+<ul>
+	<li>Facebook is using at least 19 tools including Apache Hive, MySQL and C (via Line Of Thought)</li>
+	<li>Facebook is using at least 19 tools including <span class="caps">XHP</span>, Waitr and <span class="caps">PHP</span> (via Line Of Thought)</li>
+	<li>Facebook is using at least 19 tools including Erlang, <span class="caps">XHP</span> and Facebook Scribe (via Line Of Thought)</li>
+	<li>Facebook is using at least 19 tools including Apache HBase, JSSpec and <span class="caps">XHP</span> (via Line Of Thought)</li>
+</ul>
+<p>I&#8217;m way too biased here, but seeing a cool description like that I&#8217;d almost surely go check it out. :)</p>
+<h3>More About Our Technology Stack</h3>
+<p>I&#8217;m sure we&#8217;ll be writing more about our technology choices in the weeks to come. Building out Line Of Thought has been a great learning experience, with many many lessons learned already.</p>
+<h3>Questions? Comments?</h3>
+<p>We&#8217;re very much in the early stage of this idea, and it&#8217;s safe to say to say there will be bugs. If you run into anything weird, or want to get in touch with us, please <a href="http://lineofthought.com/about">contact us directly</a>, <a href="https://getsatisfaction.com/lineofthought">let us know via GetSatisfaction</a>, or just leave a comment on the blog. Wherever you leave a message, we&#8217;ll see it!</p>
+        </div>
+        <span class="date">Posted on April 05, 2011</span>
+        <span><a href="/2011/04/05/what-is-line-of-thought.html#comments">Comments</a></span>
+      </article>
+    
+  </articles>
+  
+  <!-- Pagination links 
+  <div class="pagination">
+    
+      <span class="previous">Previous</span>
+    
+    <span class="page_number ">Page: 1 of 1</span>
+    
+      <span class="next ">Next</span>
+    
+  </div>-->
+</div>
+
+    </section>
+  </div> 
+</div> 
+ 
+<footer> 
+  <div class="container"> 
+    <section class="main-footer"> 
+      <h3>Copyright &copy; 2011 Line Of Thought.</h3> 
+      <p>Run into an issue? Have a suggestion? <a href="https://getsatisfaction.com/lineofthought">Let us know!</a></p> 
+    </section> 
+    <section class="sidebar"> 
+      <h3>Quick Nav</h3> 
+      <ul> 
+        <li><a href="http://lineofthought.com/tour">Take A Tour</a></li> 
+        <li><a href="http://lineofthought.com/about">About Line Of Thought</a></li> 
+        <li><a href="http://lineofthought.com/sites/lineofthought">Tools We Use</a></li> 
+        <li><a href="http://blog.lineofthought.com">Blog</a></li> 
+      </ul> 
+    </section> 
+  </div> 
+</footer> 
+</body> 
+</html>

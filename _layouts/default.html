@@ -1,0 +1,76 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <title>Line Of Thought Blog - Tracking what powers the web</title> 
+  <meta content="Blogging about what powers the web." name="description"/> 
+  <link rel="shortcut icon" href="http://lineofthouht.com/favicon.ico"/> 
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" /> 
+  <meta content="en-us" http-equiv="Content-Language" /> 
+  {% if page.keywords %}
+  <meta name="keywords" content="{{ page.keywords }}">
+  {% endif %}
+  <link href="http://feeds.feedburner.com/lineofthoughtcom" rel="alternate" title="Line Of Thought Blog" type="application/atom+xml" />
+  
+  <link href="http://lineofthought.com/stylesheets/all.css" media="screen" rel="stylesheet" type="text/css" /> 
+  <!--
+  <link href="http://dev.lineofthought.com:3000/stylesheets/blog.css" media="screen" rel="stylesheet" type="text/css" /> 
+  -->
+  <script type="text/javascript"> 
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-90326-15']);
+    _gaq.push(['_trackPageview']);
+ 
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head> 
+<body class="blog"> 
+<header class="group"> 
+  <div class="container"> 
+    <hgroup id="title"> 
+      <p><a href="http://lineofthought.com">Line Of <span>Thought</span></a></p> 
+      <span>Tracking what powers the web!</span> 
+    </hgroup> 
+    <nav> 
+      <ul> 
+        <li class="sites"><a href="http://lineofthought.com/sites">Sites</a></li> 
+        <li class="tools"><a href="http://lineofthought.com/tools">Tools</a></li> 
+        <li class="blog"><a href="http://blog.lineofthought.com">Blog</a></li> 
+      </ul> 
+    </nav> 
+  </div> 
+</header>
+  
+<div id="main"> 
+  <div class="container group"> 
+    <section id="content" class="main"> 
+      {{ content }}
+    </section>
+  </div> 
+</div> 
+ 
+<footer> 
+  <div class="container"> 
+    <section class="main-footer"> 
+      <h3>Copyright &copy; 2011 Line Of Thought.</h3> 
+      <p>Run into an issue? Have a suggestion? <a href="https://getsatisfaction.com/lineofthought">Let us know!</a></p> 
+    </section> 
+    <section class="sidebar"> 
+      <h3>Quick Nav</h3> 
+      <ul> 
+        <li><a href="http://lineofthought.com/tour">Take A Tour</a></li> 
+        <li><a href="http://lineofthought.com/about">About Line Of Thought</a></li> 
+        <li><a href="http://lineofthought.com/sites/lineofthought">Tools We Use</a></li> 
+        <li><a href="http://blog.lineofthought.com">Blog</a></li> 
+      </ul> 
+    </section> 
+  </div> 
+</footer> 
+</body> 
+</html>

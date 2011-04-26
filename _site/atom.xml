@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Line Of Thought Blog</title>
+ <link href="http://blog.lineofthought.com/atom.xml" rel="self"/>
+ <link href="http://blog.lineofthought.com/"/>
+ <updated>2011-04-08T22:18:32-04:00</updated>
+ <id>http://blog.lineofthought.com/</id>
+ <author>
+   <name>Line Of Thought Blog</name>
+ </author>
+
+ 
+ <entry>
+   <title>Getting Line of Thought Working in IE</title>
+   <link href="http://blog.lineofthought.com/2011/04/08/getting-lineofthought-working-in-ie.html"/>
+   <updated>2011-04-08T00:00:00-04:00</updated>
+   <id>http://blog.lineofthought.com/2011/04/08/getting-lineofthought-working-in-ie</id>
+   <content type="html">&lt;p&gt;No one likes getting a layout working in Internet Explorer. Luckily there has been a major movement in the web world to not support older versions of IE as usage of those browsers weens. That&amp;#8217;s the aim we&amp;#8217;re taking with Line of Thought as well, and plan to only test the site in the current version and previous version of major browsers. Now that IE 9 is out, that means getting this blog and &lt;a href=&quot;http://lineofthought.com&quot;&gt;Line of Thought&lt;/a&gt; working in only IE 8 and 9. One morning this week I switched over to my girlfriends old windows computer to see the horror.&lt;/p&gt;
+&lt;h3&gt;&lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 and Internet Explorer 8&lt;/h3&gt;
+&lt;p&gt;The first browser tried was IE 8. Since Line of Thought uses a number of &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 tags including &amp;lt;header&amp;gt;, &amp;lt;nav&amp;gt;, &amp;lt;section&amp;gt;, &amp;lt;aside&amp;gt; and &amp;lt;footer&amp;gt;, it was pretty obvious the site was going to fail spectacularly, and sure enough it did.&lt;/p&gt;
+&lt;p&gt;Luckily there&amp;#8217;s a great workaround for this in the form of a shim script. You can read more about this &lt;a href=&quot;http://remysharp.com/2009/01/07/html5-enabling-script/&quot;&gt;HTML5 enabling script&lt;/a&gt; or give it a try. Just make sure to include this in the &amp;lt;head&amp;gt; of your document.&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;lt&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;IE&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;http://html5shim.googlecode.com/svn/trunk/html5.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;endif&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;&lt;p&gt;This script won&amp;#8217;t even be included if you&amp;#8217;re running IE 9 or later, but for IE 8 it&amp;#8217;ll help. No css declarations had to change for this, it just worked. All of the sudden all of my tags were read and styled correctly in IE8 with no additional work. Pretty impressive!&lt;/p&gt;
+&lt;p&gt;One additional tag I somehow put in my initial prototype was a &amp;lt;sidebar&amp;gt; tag. Apparently I thought this was another new &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; 5 tag, but it&amp;#8217;s not in the specification. There is an &amp;lt;aside&amp;gt; tag, but no sidebar. Firefox and Chrome didn&amp;#8217;t complain about this, so it worked fine and was style able, but the Javascript code wouldn&amp;#8217;t work with it in IE8. After going through and changing these to &amp;lt;section class=&amp;#8220;sidebar&amp;#8221;&amp;gt; tags and updating a few styles the site looked fine in IE8 and continued to work in other browsers.&lt;/p&gt;
+&lt;p&gt;Surprisingly that was the entirety of getting the site to work in IE8. No individual styles were added, no special cases or hacks required. Part of that is due to the fact that the layout is sparse, and doesn&amp;#8217;t take advantage of many new effects. Those that it does use, such as gradients in buttons, degrade down to single color buttons which work fine in IE8. Luckily things don&amp;#8217;t need to look &lt;a href=&quot;http://dowebsitesneedtolookexactlythesameineverybrowser.com/&quot;&gt;identical&lt;/a&gt;. Total time to get the site working in IE8: less than 20 minutes.&lt;/p&gt;
+&lt;h3&gt;Internet Explorer 9&lt;/h3&gt;
+&lt;p&gt;IE 9 brings about support for most new &lt;span class=&quot;caps&quot;&gt;HTML&lt;/span&gt; tags, including all the ones mentioned above. The &lt;span class=&quot;caps&quot;&gt;CSS&lt;/span&gt; didn&amp;#8217;t throw anything far off either, so the site actually looked the same in IE9 as in Firefox and Chrome. This is my first time getting a site working in IE 9, but f this trend continues then developing for it for basic sites should be far easier than working for IE 6/7. If you&amp;#8217;re trying to get your site to work in IE, shooting for 8/9 isn&amp;#8217;t the daunting task that 6/7 used to be.&lt;/p&gt;</content>
+ </entry>
+ 
+ <entry>
+   <title>What is Line Of Thought?</title>
+   <link href="http://blog.lineofthought.com/2011/04/05/what-is-line-of-thought.html"/>
+   <updated>2011-04-05T00:00:00-04:00</updated>
+   <id>http://blog.lineofthought.com/2011/04/05/what-is-line-of-thought</id>
+   <content type="html">&lt;p&gt;If you&amp;#8217;re a passionate developer, chances are you enjoy talking to other people about the programming languages, frameworks, databases and other tools you&amp;#8217;re using. At a basic level, just about every website out there divulges basic information about their server stack, be it a little &lt;a href=&quot;http://lineofthought.com/tools/python&quot;&gt;Python&lt;/a&gt; here, or a little &lt;a href=&quot;http://lineofthought.com/tools/php&quot;&gt;&lt;span class=&quot;caps&quot;&gt;PHP&lt;/span&gt;&lt;/a&gt; there. Line Of Thought helps developers share this information with the world while aggregating it with everyone else who wants to share.&lt;/p&gt;
+&lt;p&gt;Our goal is to make it easy to create a list of tools used on any website. For instance, on the listing page for &lt;a href=&quot;http://lineofthought.com/sites/lineofthought&quot;&gt;Line Of Thought&lt;/a&gt; we share just about all technology in our stack. It lists out all the basics you&amp;#8217;d imagine (language, database, framework), but goes deeper into back end libraries. Which Ruby gems and Javascript libraries a site is using won&amp;#8217;t be interesting to everyone, but if you&amp;#8217;re looking to share with your peers, or looking for new tools to check out, this is a great way to do it fast.&lt;/p&gt;
+&lt;h3&gt;Site Owners Looking to Share&lt;/h3&gt;
+&lt;p&gt;If you&amp;#8217;re a site owner, you can &amp;#8220;claim&amp;#8221; your site on Line Of Thought, then have full access to it. This allows you to edit any part of it, and lock it from being edited by the public. You can also see each revision of how a site is using an individual tool to see how it&amp;#8217;s changed over time.&lt;/p&gt;
+&lt;p&gt;The biggest draw for site owners is just the ability to share your work. Rather than making a blog post listing out your technology stack, you could or answering questions on &lt;a href=&quot;http://lineofthought.com/sites/quora&quot;&gt;Quora&lt;/a&gt; and other Q&amp;amp;A sites, by entering your tools into Line Of Thought, there&amp;#8217;s a definite location for this knowledge that everyone can refer to.&lt;/p&gt;
+&lt;h3&gt;Tool Builders&lt;/h3&gt;
+&lt;p&gt;So many times I&amp;#8217;ve been on &lt;a href=&quot;http://lineofthought.com/sites/github&quot;&gt;GitHub&lt;/a&gt; and seen a page detailing the sites that are using that project. This kind of page begs to be entered into Line Of Thought. Rather than doing this in a wiki format, or controlled by a single person, it can be handled on a site by site basis by those using it.&lt;/p&gt;
+&lt;h3&gt;Accidental Discovery&lt;/h3&gt;
+&lt;p&gt;Browsing Wikipedia is addicting. You start on one page and before you know it, you have 4 other tabs open for other subjects that looked interesting. Line Of Thought can be the same way. You might start by wondering which sites are using &lt;a href=&quot;http://lineofthought.com/tools/mongodb&quot;&gt;MongoDB&lt;/a&gt; and before long you&amp;#8217;re going through the list of other &lt;a href=&quot;http://lineofthought.com/tools?category=datastore&quot;&gt;Datastores&lt;/a&gt; to see what other sites are using.&lt;/p&gt;
+&lt;h3&gt;Easy to Share&lt;/h3&gt;
+&lt;p&gt;The share links on the side of each site and tool make it easy to share a page on Twitter or Facebook. If you share a site, it&amp;#8217;ll grab random tools used on that site to share (of course you can enter your own as well). This helps make sharing a bit more dynamic. Refreshing the &lt;a href=&quot;http://lineofthought.com/sites/facebook&quot;&gt;Facebook&lt;/a&gt; page a few times, the share message shows up as the following:&lt;/p&gt;
+&lt;ul&gt;
+	&lt;li&gt;Facebook is using at least 19 tools including Apache Hive, MySQL and C (via Line Of Thought)&lt;/li&gt;
+	&lt;li&gt;Facebook is using at least 19 tools including &lt;span class=&quot;caps&quot;&gt;XHP&lt;/span&gt;, Waitr and &lt;span class=&quot;caps&quot;&gt;PHP&lt;/span&gt; (via Line Of Thought)&lt;/li&gt;
+	&lt;li&gt;Facebook is using at least 19 tools including Erlang, &lt;span class=&quot;caps&quot;&gt;XHP&lt;/span&gt; and Facebook Scribe (via Line Of Thought)&lt;/li&gt;
+	&lt;li&gt;Facebook is using at least 19 tools including Apache HBase, JSSpec and &lt;span class=&quot;caps&quot;&gt;XHP&lt;/span&gt; (via Line Of Thought)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;I&amp;#8217;m way too biased here, but seeing a cool description like that I&amp;#8217;d almost surely go check it out. :)&lt;/p&gt;
+&lt;h3&gt;More About Our Technology Stack&lt;/h3&gt;
+&lt;p&gt;I&amp;#8217;m sure we&amp;#8217;ll be writing more about our technology choices in the weeks to come. Building out Line Of Thought has been a great learning experience, with many many lessons learned already.&lt;/p&gt;
+&lt;h3&gt;Questions? Comments?&lt;/h3&gt;
+&lt;p&gt;We&amp;#8217;re very much in the early stage of this idea, and it&amp;#8217;s safe to say to say there will be bugs. If you run into anything weird, or want to get in touch with us, please &lt;a href=&quot;http://lineofthought.com/about&quot;&gt;contact us directly&lt;/a&gt;, &lt;a href=&quot;https://getsatisfaction.com/lineofthought&quot;&gt;let us know via GetSatisfaction&lt;/a&gt;, or just leave a comment on the blog. Wherever you leave a message, we&amp;#8217;ll see it!&lt;/p&gt;</content>
+ </entry>
+ 
+ 
+</feed>
